@@ -1,124 +1,248 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
-}
-body {
-    background-color: grey;
-}
-/* header changed to follow elements in html body */
+    padding: 0;
+    box-sizing: border-box;   
+}    
+    
 header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode' ,'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: grey;
-    color: #ffffff;
+    padding: 20px 35px;
+    background-color: #39a6b2;
+    display: contents;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-header h1 {
-    display: inline-block;
-    font-size: 48px;
+
+header h1, a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(50, 22, 128);
+    text-decoration:none;
 }
-header h1 .seo {
-    color: #d9dcd6;
-}
-header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-/* div changed to nav */
+
 header nav ul {
-    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
-header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
 }
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-p {
-    font-size: 16px;
-}
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image:url("../../digital-marketing-meeting.jpg");
-    background-size: cover;
+
+
+.intro {
+    background-image: url("./images/hero-bg.jpg");
+    height: 655px;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
+.myself img { 
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
 
 }
 
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri ,'Trebuchet MS', sans-serif;
-    background-color:#2589bd;
-    }
-/* benefit-center to condense all benefit traits */
-.benefit-center {
-    margin-bottom: 32px;
-    color: #ffffff;
-    }
-
-.benefit h3 {
-    margin-bottom: 10px;
+.myself h2 {
     text-align: center;
-}
-.benefits img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-/* content-info used to condence / follow all css rules */
-.content-info {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri ,'Trebuchet MS' ,sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-/* changed to content img it condense / follow css rules */
-.content img {
-    max-height: 200px;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     
 }
-/* used content h2 to condense */
-.content h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
+
+#about-me p {
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode' ,'Lucida Grande' ,'Lucida Sans', Arial, sans-serif;
+
+.my-stuff h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.my-stuff ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
-footer h2 {
-    font-size: 20px;
+.my-stuff li {
+    padding: 22px;
+
 }
+
+.portfolio {
+    background-color: rgb(13, 1, 24);
+}
+.my-stuff img {
+    width: 450px;
+    height: 200px;
+    border: rgb(195, 129, 216) 3px solid;
+    border-radius: 15px;
+}
+
+.my-stuff img:hover {
+    transform: scale(1.2);
+    opacity: 0.5;
+    
+}
+
+.my-stuff p {
+    padding: inherit;
+}
+footer {
+    background: #39a6b2;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contacts img {
+    margin: 0 20px;
+    width: 35px;
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    #about-me p {
+        top: 68%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+            padding: 30px 15px;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+    header nav ul li a {
+        font-size: 15px;
+    }
+
+    .myself img { 
+        height: 150px;
+        width: 150px;
+        top: 38%;
+    }
+
+    .my-stuff img {
+        width: 430px;
+        height: 180px;
+
+    }
+    #about-me p {
+        top: 60%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+@media screen and (max-width: 500px) {
+
+    .my-stuff img {
+        width: 280px;
+        height: 100px;
+    }
+
+    .myself img { 
+        height: 120px;
+        width: 120px;
+        top: 35%;
+    }
+    footer h2 {
+        text-align: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #about-me p {
+        top: 63%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #about-me p {
+        top: 68%;
+    }
+
+    footer {
+        padding: 4px 2px;
+    }
+
+}
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
